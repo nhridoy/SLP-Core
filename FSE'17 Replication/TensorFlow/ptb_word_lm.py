@@ -365,7 +365,7 @@ def main(_):
       print("Test Perplexity: %.3f" % test_perplexity)
 
       if FLAGS.save_path:
-        print("Saving model to %s." % FLAGS.save_path)
+        print(f"Saving model to {FLAGS.save_path}.")
         sv.saver.save(session, FLAGS.save_path, global_step=sv.global_step)
 
 

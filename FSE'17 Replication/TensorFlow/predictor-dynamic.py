@@ -300,7 +300,7 @@ def run_epoch(session, model, eval_op=None, verbose=False):
 
     costs += cost
     iters += model.input.num_steps
-    
+
     probs = vals["output_probs"]
     sort = sorted(enumerate(probs[0]), key=lambda i:i[1]) 
     prob = 1.0/np.exp(cost)
@@ -334,7 +334,7 @@ def main(_):
 
   raw_data = reader.ptb_raw_data(FLAGS.data_path)
   train_data, valid_data, test_data, _ = raw_data
-   
+
   config = get_config()
   eval_config = get_config()
   eval_config.batch_size = 1
